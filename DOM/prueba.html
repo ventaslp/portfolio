@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fotos</title>
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+	<style>
+		#textos{
+			display: grid;
+			grid-template-rows: 1fr;
+		}
+	</style>
+</head>
+<body>
+	<br><br>
+	<h1 style="font-size: 55px; text-align: center; font-family: 'Rajdhani', sans-serif;">Deslizá para cambiar las fotos</h1>
+	<div style="text-align: center; margin-top: 150px">
+		<img src="1.jpg" id="foto1">
+		<img src="2.jpg" id="foto2">
+		<img src="3.jpg" id="foto3">
+	</div>
+	<div style="text-align: center;" id="textos">
+		<br>
+		<p id="titulo1" style="font-size: 55px; margin: auto; background-color: peachpuff;">Click aquí para resetear las fotos</p> <br>
+	</div>
+
+	<script>
+		
+		const foto1 = document.querySelector('#foto1');
+		const foto2 = document.querySelector('#foto2');
+		const foto3 = document.querySelector('#foto3');
+		const t1 = document.querySelector('#titulo1');
+
+		foto1.addEventListener('mouseover', function(){
+			foto1 = foto1.src = "4.jpg"
+		});
+
+		foto2.addEventListener('mouseover', function(){
+			foto2 = foto2.src = "5.jpg"
+		});
+
+		foto3.addEventListener('mouseover', function(){
+			foto3 = foto3.src = "6.jpg"
+		});
+
+		t1.addEventListener('click', function(){
+			foto1 = foto1.src = "1.jpg";
+		});
+
+		t1.addEventListener('click', function(){
+			foto2 = foto2.src = "2.jpg";
+		});
+
+		t1.addEventListener('click', function(){
+			foto3 = foto3.src = "3.jpg";
+		});
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background-image: linear-gradient(45deg, #a5bcd6, #3b8beb) 
+}
+
+h1 {
+  color: snow;
+}
+
+.contenedor {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: 0.5em solid black;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-areas:  "tit tit tit tit tit"
+                        "box1 box2 box2 box2 box3"
+                        "box1 box2 box2 box2 box7"
+                        "box1 box2 box2 box2 box7"
+                        "box1 box2 box2 box2 box7"
+                        "box1 box4 box4 box5 box7"
+                        "box1 box6 box6 box6 box8"
+                        "box1 box6 box6 box6 box8"
+                        "box9 box9 box9 box9 box9";
+  grid-gap: 1px;
+  min-width: 600px;
+  max-width: 50%;
+  margin: auto;
+  min-height: 900px;
+}
+
+.boxes {
+  border: white 1px solid;
+  background-color: #f4976c;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.box6:hover,
+.box8:hover,
+.box9:hover {
+  background-color: #303c63;
+  color: snow;
+}
+
+.contenedor .tit {
+  grid-area: tit;
+}
+
+.contenedor .box1 {
+  grid-area: box1;
+}
+
+.contenedor .box9 {
+  grid-column: box9;
+}
+
+.contenedor .box6 {
+  grid-area: box6;
+}
+
+.contenedor .box8 {
+  grid-area: box8;
+}
+
+.contenedor .box7{
+  grid-area: box7;
+}
+
+.texto2-box7{
+  display: none;
+}
+
+.contenedor .box3 {
+  grid-area: box3;
+}
+
+.contenedor .box4 {
+  grid-area: box4;
+}
+
+.contenedor .box5 {
+  grid-area: box5;
+}
+
+.contenedor .box2 {
+  grid-area: box2;
+}
+
+.minimo {
+  display: none;
+}
+
+@media screen and (max-width: 1000px){
+  .maximo {
+    display: none;
+  }
+  .minimo {
+    display: inline;
+  }
+
+  .boxes {
+    background-color: indigo;
+    color: snow;
+  }
+  .contenedor {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px repeat(3, 1fr);
+    grid-template-areas:  "tit tit tit"
+                          "box1 box2 box3"
+                          "box4 box5 box6"
+                          "box7 box8 box9"
+  }
+}
+
+
+@media screen and (max-width: 650px){
+  .maximo {
+    display: none;
+  }
+  .minimo {
+    display: inline;
+  }
+
+  .boxes {
+    background-color: rgb(13, 96, 110);
+    color: snow;
+  }
+  .contenedor {
+    min-width: 400px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:  "tit"
+                          "box1"
+                          "box2"
+                          "box3"
+                          "box4"
+                          "box5"
+                          "box6"
+                          "box7"
+                          "box8"
+                          "box9"
+  }
+}
+
+/*boton para bloquear minimo de ventana
+botón para cambiar estilos*/

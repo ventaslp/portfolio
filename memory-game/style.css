@@ -1,0 +1,62 @@
+* {
+	padding: 0;
+	margin: 0;
+	/*ver que onda lo de border-box*/
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	/*al agregarle al body 'display: flex' y 'margin:auto' al contenedor, voy a centrar todo*/
+	display: flex;
+	background-color: #66b9bf;
+}
+
+.memory-game {
+	width: 640px;
+	height: 640px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+}
+
+.memory-card {
+	width: calc(25% - 10px);
+	height: calc(33.333% - 10px);
+	margin: 5px;
+	position: relative;
+	/*hay que sumar una propiedad de transform aquí, para que la transición funcione*/
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform .5s;
+}
+
+.memory-card.flip{
+	transform: rotateY(180deg);
+}
+
+/*con lo siguiente, al hacer click, se achica la imagen a un 97%*/
+.memory-card:active {
+	transform: scale(.95);
+	/* y aquí se hace la transición un poco más lenta*/
+	transition: transform .2s;
+
+}
+
+.front-face, 
+.back-face {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	border-radius: 5px;
+	position: absolute;
+	background-color: #07889b;
+	/*'Backface hidden: es una propiedad que hay que agregar al efecto 3d de transición,
+	para que no afecte que siempre veamos el back face de una imagen*/'
+	backface-visibility: hidden;
+}
+ /*esto se agrega para que no siempre se vea el backface de las imagenes*/
+.front-face {
+	transform: rotateY(180deg);
+}
