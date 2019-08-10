@@ -1,16 +1,37 @@
+html {
+  min-height: 100%;
+}
+
 *{
   margin: 0;
   padding: 0;
 }
 
-html {
-  min-height: 100%;
+body {
+  background-image: linear-gradient(to top, #2c3e50, #3498db); 
 }
 
-body{
+.container {
+  width: 90%;
+  margin: auto;
   margin-top: 20px;
-  background-color: #b8c6db;
-  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-template-areas:  "cabeza cabeza cabeza cabeza"
+                        "seccion seccion seccion seccion"
+                        "tarjeta1 tarjeta2 tarjeta3 tarjeta4"
+                        "tarjeta5 tarjeta6 tarjeta7 tarjeta8"
+                        "tarjeta9 tarjeta10 tarjeta11 tarjeta12";
+  grid-gap: 15px;
+}
+
+.container .cabeza {
+  grid-area: cabeza;
+}
+
+.container .seccion {
+  grid-area: seccion;
 }
 
 .cabeza {
@@ -20,30 +41,151 @@ body{
   box-shadow: 2px 2px 5px black;
 }
 
-.col {
-  max-width: 420px;
-}
-
-.img-thumbnail:hover {
-  border: 3px solid green;
-  padding: 0;
-}
-
-.container img {
-  width: 220px;
+.cabeza img {
+  width: 280px;
   height: auto;
 }
 
-.container {
+.display-3, .seccion p {
+  color: white;
   text-align: center;
 }
 
-.btn {
-  margin-bottom: 45px;
+
+
+
+
+
+
+.container .tarjeta1 {
+  grid-area: tarjeta1;
+}
+.container .tarjeta2 {
+  grid-area: tarjeta2;
+}
+.container .tarjeta3 {
+  grid-area: tarjeta3;
+}
+.container .tarjeta4 {
+  grid-area: tarjeta4;
+}
+.container .tarjeta5 {
+  grid-area: tarjeta5;
+}
+.container .tarjeta6 {
+  grid-area: tarjeta6;
+}
+.container .tarjeta7 {
+  grid-area: tarjeta7;
+}
+.container .tarjeta8 {
+  grid-area: tarjeta8;
+  display: none;
+}
+.container .tarjeta9 {
+  grid-area: tarjeta9;
+  display: none;
+}
+.container .tarjeta10 {
+  grid-area: tarjeta10;
+  display: none;
+}
+.container .tarjeta11 {
+  grid-area: tarjeta11;
+  display: none;
+}
+.container .tarjeta12 {
+  grid-area: tarjeta12;
+  display: none;
 }
 
-@media screen and (max-width: 550px){
-  .row {
-    display: block;
-  }
+.card {
+  background-color: rgba(254, 255, 255, 0.37);
+  min-height: 260px;
+  
 }
+
+.card:hover {
+  box-shadow: 2px 2px 2px black;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 1000px){
+
+  .container {
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas:  "cabeza cabeza cabeza"
+                          "seccion seccion seccion"
+                          "tarjeta1 tarjeta2 tarjeta3"
+                          "tarjeta4 tarjeta5 tarjeta6"
+                          "tarjeta7 tarjeta8 tarjeta9"
+                          "tarjeta10 tarjeta11 tarjeta12";
+    grid-gap: 15px;
+  }
+  
+} 
+
+@media screen and (max-width: 800px){
+
+  .container {
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas:  "cabeza cabeza"
+                          "seccion seccion"
+                          "tarjeta1 tarjeta2"
+                          "tarjeta3 tarjeta4"
+                          "tarjeta5 tarjeta6"
+                          "tarjeta7 tarjeta8"
+                          "tarjeta9 tarjeta10"
+                          "tarjeta11 tarjeta12";
+    grid-gap: 15px;
+  }
+  
+} 
+
+@media screen and (max-width: 580px){
+
+  .cabeza {
+    background-image: none;
+    box-shadow: none;
+  }
+
+  .card {
+    width: 300px;
+    height: 200px;;
+    margin: auto;
+  }
+
+  .card {
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.4s;
+  }
+
+  .container {
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas:  "cabeza"
+                          "seccion"
+                          "tarjeta1"
+                          "tarjeta2"
+                          "tarjeta3"
+                          "tarjeta4"
+                          "tarjeta5" 
+                          "tarjeta6"
+                          "tarjeta7"
+                          "tarjeta8"
+                          "tarjeta9"
+                          "tarjeta10"
+                          "tarjeta11"
+                          "tarjeta12";
+    grid-gap: 15px;
+  }
+  
+} 
