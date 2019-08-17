@@ -80,11 +80,9 @@ body {
 }
 .container .tarjeta8 {
   grid-area: tarjeta8;
-  display: none;
 }
 .container .tarjeta9 {
   grid-area: tarjeta9;
-  display: none;
 }
 .container .tarjeta10 {
   grid-area: tarjeta10;

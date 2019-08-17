@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Juego de series</title>
+  <style>
+    h2, p {
+      color: aliceblue;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body class="bg-dark">
+  <div class="container">
+    <h1 class="display-4 text-light text-center">
+      Adiviná la serie
+    </h1>
+    <hr><br>
+    <div class="fotos row justify-content-md-center">
+
+    </div>
+    <br><br><br>
+
+    <form id="task-form">
+      <div class="input-field col s12">
+        <input class="form-control" type="text" name="task" id="task">
+      </div> <br>
+      <div class="text-center">
+      <input type="submit" value="Enviar" class="btn btn-primary btn-lg">
+    </div>
+    </form>
+    <br><br>
+    <div>
+      <h2 class="text-center msj"></h2><br>
+    </div>
+    <div class="temp">
+      <p class="text-center">Tiempo: <span class="tiempo"></span></p>
+    </div>
+    <div>
+        <p class="text-center">Respuestas correctas, <span class="aciertos"></span> de 20</p>
+    </div>
+
+    <div>
+      <a href="resultados.html"><button>Ver respuestas correctas</button></a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
